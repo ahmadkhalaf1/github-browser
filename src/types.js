@@ -1,0 +1,3 @@
+export const IS_LOADING = "IS_LOADING";
+export const SET_REPOSITORIES = "SET_REPOSITORIES";
+export const SET_SEARCH_TERM = "SET_SEARCH_TERM";
