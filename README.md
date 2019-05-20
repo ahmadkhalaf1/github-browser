@@ -10,10 +10,11 @@ simple react redux - hooks app with nodejs express typescript server to search f
 ```Then add it to server/src/configuration/config.ts ```<br/> ```ex: accessToken = "Token 22c67059e7525004d180192b3512dee38c13c253"; ```
 ## Server Install
 ```npm install```<br/>
-```npm run build-ts```
+```npm run build-ts```<br/>
+
 
 ## Server Running
-```npm run watch-node or npm run start```
+```npm run server```
 ## React Testing
 
 ```coming soon ...```
