@@ -26,7 +26,7 @@ const styles = theme => ({
 
 const RepoList = props => {
   const { classes, repos, isBookmark } = props;
-
+  console.log(repos);
   return (
     <React.Fragment>
       <div className={classNames(classes.layout, classes.cardGrid)}>
@@ -41,7 +41,7 @@ const RepoList = props => {
           #{repos.length} Repository
         </Typography>
         <Grid container spacing={24}>
-          {repos.map((card, index) => (
+          {repos.length > 0 && repos.map((card, index) => (
             <RepoCard card={card} key={index} isBookmark={isBookmark} />
           ))}
         </Grid>

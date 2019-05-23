@@ -30,9 +30,9 @@ const Home = props => {
         }
         return response.json();
       })
-      .then(data => {
+      .then(result => {
         setBookmarkLoader(false);
-        props.setRepositories(data);
+        props.setRepositories(result.data);
       })
       .catch(err => {
         notify("error", "No Result Found");

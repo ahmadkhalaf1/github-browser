@@ -49,14 +49,18 @@ export let listBookmarkedRepos = (req: Request, res: Response) => {
     .then((response: any) => {
       // handle success
       if (response.data.length <= 0) {
-        return res.status(404).json("No result found");
+        return res.status(404).json({ data: [], message: "No result found" });
       }
 
-      return res.status(200).json(response.data);
+      return res
+        .status(200)
+        .json({ data: response.data });
     })
     .catch((error: any) => {
       // handle error
-      return res.status(400).json("Error while fetching bookmarked repos");
+      return res
+        .status(400)
+        .json({ data: [], message: "Error while fetching bookmarked repos" });
     });
 };
 
