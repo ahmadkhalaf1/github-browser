@@ -38,7 +38,7 @@ app.use((req, res, next) => {
  */
 
 app.get("/api/v1/repos/q=:term", cache(10), githubController.searchForRepos);
-app.get("/api/v1/repos/bookmarks", cache(10), githubController.listBookmarkedRepos);
+app.get("/api/v1/repos/bookmarks", githubController.listBookmarkedRepos);
 app.post("/api/v1/repos/bookmarks", githubController.bookmarkRepos);
 app.delete("/api/v1/repos/bookmarks/:ownerName/:repoName", githubController.removeReposBookmark);
 

@@ -25,7 +25,10 @@ export let searchForRepos = (req: Request, res: Response) => {
     .then((response: any) => {
       // handle success
       if (response.data.total_count === 0) {
-        return res.status(404).json("No result found");
+        return res.status(404).json({
+          items: [],
+          message: "No result found",
+        });
       }
 
       return res.status(200).json({
